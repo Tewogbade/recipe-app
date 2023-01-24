@@ -23,7 +23,7 @@ const Recipe = () => {
   return (
     <DetailWrapper>
       <div>
-        <h2>{details.title}</h2>
+        <h3>{details.title}</h3>
         <img src={details.image} alt={details.title} />
       </div>
 
@@ -61,33 +61,85 @@ const Recipe = () => {
 };
 
 const DetailWrapper = styled.div`
-  margin: 10rem 0 5rem;
+  margin: 5rem auto;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
   display: flex;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+  @media (max-width: 1200px) {
+    display: block;
+  }
+
+  img {
+    border-radius: 2rem;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
   .active {
-    background: linear-gradient(35deg, #494949, #313131);
-    color: white;
+    background: linear-gradient(to right, #f27121, #e94057);
+    color: #273248;
   }
-  h2 {
-    margin-bottom: 2rem;
+
+  h3 {
+    margin-top: 0;
   }
+
   li {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2.5rem;
+    margin-left: 1rem;
   }
+
   ul {
     margin-top: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    text-align: justify;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 
 const Button = styled.button`
   padding: 1rem 2rem;
-  color: #313131;
-  background: white;
+  color: white;
+  background: #273248;
   border: 2px solid black;
   margin-right: 2rem;
-  font-size: 600;
+  font-weight: 600;
+  @media (max-width: 768px) {
+    margin: 2rem;
+  }
 `;
+
 const Info = styled.div`
-  margin-left: 10rem;
+  margin-left: 5rem;
+  width: 60%;
+  @media (max-width: 768px) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  section {
+    button {
+      border-radius: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 `;
 export default Recipe;

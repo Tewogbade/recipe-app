@@ -35,7 +35,15 @@ const Veggie = () => {
         <Splide
           options={{
             perPage: 3,
-            arrows: false,
+            mediaQuery: "max",
+            breakpoints: {
+              868: {
+                perPage: 1,
+              },
+              1124: {
+                perPage: 2,
+              },
+            },
             pagination: false,
             drag: "free",
             gap: "4rem",
@@ -61,6 +69,15 @@ const Veggie = () => {
 };
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+  h3 {
+    margin-bottom: 0rem;
+    background-color: #ffa364;
+    text-align: center;
+    /* @media (max-width: 768px) {
+      text-align: center;
+      margin: 0;
+    } */
+  }
 `;
 
 const Card = styled.div`

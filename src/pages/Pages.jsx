@@ -8,7 +8,7 @@ import { AnimatePresence } from "framer-motion";
 
 const Pages = () => {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cuisine/:type" element={<Cuisine />} />

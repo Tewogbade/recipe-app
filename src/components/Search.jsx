@@ -37,9 +37,9 @@ const FormStyle = styled.form`
 
   input {
     border: none;
-    background: linear-gradient(35deg, #494949, #313131);
+    background-color: #273248;
     font-size: 1.5rem;
-    color: white;
+    color: #ffebd2;
     padding: 1rem 3rem;
     border: none;
     border-radius: 1rem;
@@ -47,7 +47,7 @@ const FormStyle = styled.form`
     width: 100%;
   }
   svg {
-    color: white;
+    color: #ffa364;
     position: absolute;
     top: 50%;
     left: 0%;

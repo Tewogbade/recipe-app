@@ -34,8 +34,16 @@ const Popular = () => {
 
         <Splide
           options={{
-            perPage: 4,
-            arrows: false,
+            perPage: 3,
+            mediaQuery: "max",
+            breakpoints: {
+              868: {
+                perPage: 1,
+              },
+              1124: {
+                perPage: 2,
+              },
+            },
             pagination: false,
             drag: "free",
             gap: "4rem",
@@ -61,6 +69,15 @@ const Popular = () => {
 };
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+  h3 {
+    margin-bottom: 0rem;
+    background-color: #ffa364;
+    text-align: center;
+    /* @media (max-width: 768px) {
+      text-align: center;
+      margin: 0;
+    } */
+  }
 `;
 
 const Card = styled.div`
@@ -68,6 +85,11 @@ const Card = styled.div`
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
 
   img {
     border-radius: 2rem;
