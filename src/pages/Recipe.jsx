@@ -68,6 +68,7 @@ const Bdiv = styled.div`
     justify-content: space-evenly;
   }
 `;
+
 const DetailWrapper = styled.div`
   margin: 5rem auto;
   margin-top: 6rem;
@@ -124,8 +125,11 @@ const Button = styled.button`
   color: white;
   background: #273248;
   border: 2px solid black;
-  /* margin-right: 2rem; */
+  margin-right: 2rem;
   font-weight: 600;
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 const Info = styled.div`
