@@ -28,19 +28,20 @@ const Recipe = () => {
       </div>
 
       <Info>
-        <Button
-          className={activeTab === "instructions" ? "active" : ""}
-          onClick={() => setActiveTab("instructions")}
-        >
-          Instructions
-        </Button>
-        <Button
-          className={activeTab === "ingredients" ? "active" : ""}
-          onClick={() => setActiveTab("ingredients")}
-        >
-          Ingredients
-        </Button>
-
+        <Bdiv>
+          <Button
+            className={activeTab === "instructions" ? "active" : ""}
+            onClick={() => setActiveTab("instructions")}
+          >
+            Instructions
+          </Button>
+          <Button
+            className={activeTab === "ingredients" ? "active" : ""}
+            onClick={() => setActiveTab("ingredients")}
+          >
+            Ingredients
+          </Button>
+        </Bdiv>
         {activeTab === "instructions" && (
           <div>
             <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
@@ -60,6 +61,13 @@ const Recipe = () => {
   );
 };
 
+const Bdiv = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-evenly;
+  }
+`;
 const DetailWrapper = styled.div`
   margin: 5rem auto;
   margin-top: 6rem;
@@ -116,11 +124,8 @@ const Button = styled.button`
   color: white;
   background: #273248;
   border: 2px solid black;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
   font-weight: 600;
-  @media (max-width: 768px) {
-    margin: 2rem;
-  }
 `;
 
 const Info = styled.div`

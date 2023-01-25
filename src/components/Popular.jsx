@@ -71,12 +71,7 @@ const Wrapper = styled.div`
   margin: 4rem 0rem;
   h3 {
     margin-bottom: 0rem;
-    background-color: #ffa364;
     text-align: center;
-    /* @media (max-width: 768px) {
-      text-align: center;
-      margin: 0;
-    } */
   }
 `;
 

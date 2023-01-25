@@ -26,8 +26,6 @@ const Search = () => {
 };
 
 const FormStyle = styled.form`
-  /* margin: 0 20rem; */
-
   div {
     position: relative;
     width: 60%;
